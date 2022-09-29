@@ -7,28 +7,83 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
+    
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
       </header>
+      
       <div class="card">
+        
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+
         <div class="card-body">
+          
+          <form>
+            <label for="minChar">Minimum Number of Characters</label>
+            <input type="number" id="minChar" ><br><br>
+
+            <label for="maxChar">Maximum Number of Charactes</label>
+            <input type="number" id="maxChar"><br><br>
+
+            <label for="lowChar">Number of Lowercase Letters</label>
+            <input type="number" id="lowChar" ><br><br>
+
+            <label for="upChar">Number of Uppercase Letters</label>
+            <input type="number" id="upChar"><br><br>
+
+            <label for="spcChar">Number of Special Characters</label>
+            <input type="number" id="spcChar"><br><br>
+          </form>         
+          
+          
+        
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+        
+
+
+
         </div>
+
+
+
         <div class="card-footer">
+    
           <button id="generate" class="btn">Generate Password</button>
+
+            <!--
+            <input id="userInput" type="text" placeholder="Text">
+            <button onclick="returnText()">Submit</button>
+
+            -->
+
+
         </div>
+
+
+
       </div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
+
+
+<!----   
+<div class="card-body">
+  <textarea
+    readonly
+    id="password"
+    placeholder="Your Secure Password"
+    aria-label="Generated Password"
+  ></textarea>
+</div>
