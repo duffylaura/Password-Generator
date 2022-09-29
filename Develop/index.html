@@ -18,26 +18,30 @@
       <div class="card">
         
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2>Enter your password criteria below then click "Generate Password."</h2>
+          <p> If one of these criteria are not necessary, please leave the field blank. For example, if I did not need any special characters, I would leave the last field blank.</p>
         </div>
 
         <div class="card-body">
           
           <form>
             <label for="minChar">Minimum Number of Characters</label>
-            <input type="number" id="minChar" ><br><br>
+            <input type="number" min="1" max="150" id="minChar" ><br><br>
 
             <label for="maxChar">Maximum Number of Charactes</label>
-            <input type="number" id="maxChar"><br><br>
+            <input type="number" min="1" max="150" id="maxChar"><br><br>
 
-            <label for="lowChar">Number of Lowercase Letters</label>
-            <input type="number" id="lowChar" ><br><br>
+            <label for="lowChar">At least [] lowercase letters... </label>
+            <input type="number" min="1" max="26" id="lowChar" ><br><br>
 
-            <label for="upChar">Number of Uppercase Letters</label>
-            <input type="number" id="upChar"><br><br>
+            <label for="upChar">At least [] uppercase letters...</label>
+            <input type="number" min="1" max="26" id="upChar"><br><br>
 
-            <label for="spcChar">Number of Special Characters</label>
-            <input type="number" id="spcChar"><br><br>
+            <label for="numChar">At least [] numbers... </label>
+            <input type="number" min="1" max="10" id="numChar"><br><br>
+
+            <label for="spcChar">At least [] special characters... </label>
+            <input type="number" min="1" max = "31" id="spcChar"><br><br>
           </form>         
           
           
