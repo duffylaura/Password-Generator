@@ -14,7 +14,7 @@ When you need a new, secure password, enter the following URL into any browser:
 
 You will see a landing page that looks like the following: 
 
-<img src = "./Assets/Screenshot-Landing_Page.png" alt = "Screenshot of landing page.">
+<img src = "./Assets/Screenshot-Landing-Page.png" alt = "Screenshot of landing page.">
 
 You will be presented with a series of prompts regarding your password criteria. As you can see on the screenshot, you can enter information for the following criteria: 
 
@@ -63,6 +63,10 @@ Please refer to LICENSE in GitHub repository.
 ## How to Contribute
 
 Find a bug!? Feel free to reach out! Just make sure to follow the Contributor Covenant!
+
+Email: LauraDuffy700@gmail.com
+
+GitHub: github.com/duffylaura
 
 
 
