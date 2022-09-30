@@ -80,16 +80,14 @@ if (up>0){
   randomUpChars.pop();
 };
 
-// Generate Neumeric Characters, store in randomNumChars
-
 var randomNumChars = [''];
 
 if (num>0){
 
-  var numRandomStart = Math.round(Math.random()*10);
+  var numRandomStart = Math.round(Math.random()*5);
 
-  for (var i = num; i>0; i--) {
-  var addTo2 = numALL [(numRandomStart)+(i-1)];
+  for (var i = num; i>0; --i) {         //this for loop keeps glitching, but not consistently. Manuel posted about double minus as prefix. That seemed to fix it. Edited spc char loop too.
+  var addTo2 = numALL[(numRandomStart)+(i-1)];
   randomNumChars.push(addTo2);}
 
   randomNumChars.shift();
@@ -107,7 +105,7 @@ if (spc>0){
 
   var spcRandomStart = Math.round(Math.random()*12);
 
-  for (var i = spc; i>0; i--) {
+  for (var i = spc; i>0; --i) {
   var addTo3 = spcALL [(spcRandomStart)+(i-1)];
   randomSpcChars.push(addTo3);}
 
@@ -121,7 +119,7 @@ if (spc>0){
   var criteria1 = randomLowChars.concat(randomUpChars, randomNumChars, randomSpcChars);
 
   var criteria2 = criteria1.join('');
-
+  
 ////////// If statements that generate the password return.\\\\\\\\\\\\\\\\\
 
 if (criteria2=='') {
