@@ -1,3 +1,5 @@
+// Global arrays to use for generating password. 
+
 var upALL = ['S','Y','I','P','M','H','V','G','T','D','N','O','E','B','K','F','Z','Q','L','R','C','J','W','X','A','U'];
 var lowALL = ['u','r','q','t','z','k','p','c','b','s','w','h','n','g','f','m','l','y','i','o','x','j','a','d','e','v'];
 var numALL = ['5','9','8','4','1','2','0','6','7','3'];
@@ -120,7 +122,7 @@ if (spc>0){
 
   var criteria2 = criteria1.join('');
 
-//////////////\\\\\\\\\\\\\\\\\\\\\\\
+////////// If statements that generate the password return.\\\\\\\\\\\\\\\\\
 
 if (criteria2=='') {
     

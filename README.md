@@ -1,99 +1,68 @@
-# 03 JavaScript: Password Generator
+# Password Generator 
 
-## Your Task
+## Description 
 
-This week’s challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+This purpose of this repository is to refactor code for a Password Generator. The scenario given was that this is a password generator used by employees with access to sensitive data. The application must be able to generate passwords that meet certain criteria input by the user. The purpose of this application is to create strong passwords to provide greater security. 
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+## Installation 
 
-## User Story
+N/A
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## Usage
 
-## Acceptance Criteria
+When you need a new, secure password, enter the following URL into any browser: 
 
-```
-GIVEN I need a new, secure password
+You will see a landing page that looks like the following: 
 
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
+<img src = "./Assets/Screenshot-Landing_Page.png" alt = "Screenshot of landing page.">
 
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
+You will be presented with a series of prompts regarding your password criteria. As you can see on the screenshot, you can enter information for the following criteria: 
 
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
+- Minimum character length (if any)
+- Maximum character length (if any)
+- Number of lowercase letters required (if any)
+- Number of capital letters required (if any)
+- Number of numeric characters required (if any)
+- Number of special characters required (if any)
 
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+You may choose to enter values for all of these criteria, only a few, or only one. The button will not work, however, if you do not enter anything in the password criteria prompts. 
 
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
+After entering your desired amount of criteria, an output message will appear written in the box above the button. You can then copy/paste that ouput and use it as your new password!
 
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
+## Additional Usage Notes
 
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+1. If you enter a minimum character count value that is larger than the maximum character count value, you will receive a logic error message and be asked to fix your criteria. 
+2. If you enter "1" in the maximum character count, you will receive a message that having a 1 character password is not secure. You will be asked to fix your criteria and try again. 
+3. If you ONLY enter a "1" in the minimum character count you will receive the same message about a 1 character password. 
+4. If you ONLY enter values in the minimum or maximum character count prompts then the Password Generator will generate a password to meet that character count using an array of mixed lowercase letters, uppercase letters, special characters, and numbers (called "all" in the code).
+5. If you ONLY enter values in the parameter prompts other than those regarding character count, the Password Generator will generate a password that meets those criteria exactly. 
+6. If you enter a minimum value and parameter prompts, the Password Generator will first create a string that meets your parameters. Then, it will create a random string using the "all" array to meet the remaining character count. It will output the concatenation of the first string and the second. 
+7. If the minimum character count value is equal to the maximum character count value, the Password Generator will function as it does in Note 6. Unless they are both equal to 1. Then the Password Generator will function as it does in Note 2.
+8. If you enter a maximum value and parameter prompts, the Password Generator will function as it does in Note 5. Unless, the length of the password generated from the prompts is larger than the entered maximum character count. For example, if you entered that you need 2 uppercase letters and 2 special characters, and a maximum character count of 3. This will result in an error message. You will be asked to fix your criteria and try again. 
 
-## Mock-Up
 
-The following image shows the web application's appearance and functionality:
+## Technology Used
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-challenge-demo.png)
+GitHub, Git, HTML5, CSS3, JavaScript
 
-## Grading Requirements
+## Learning Points 
 
-This challenge is graded based on the following criteria: 
+-Connecting user input to variables in JavaScript
+-Using a "for" loop and adding the value at the end of each iteration of the loop to an exisitng array
+-Creating randomness in JavaScript, and learning about the lack of true randomness
+-Learning about different methods for shuffling arrays, including the Fisher-Yates shuffle
 
-### Technical Acceptance Criteria: 40%
+## User Info
 
-  * Satisfies all of the preceding acceptance criteria plus the following:
+Created by Laura Duffy (@ GitHub) for the UC Berkeley Extension, Full Stack Coding Bootcamp.
 
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
+## License 
 
-### Deployment: 32%
+Please refer to LICENSE in GitHub repository. 
 
-* Application deployed at live URL.
+## How to Contribute
 
-* Application loads with no errors.
+Find a bug!? Feel free to reach out! Just make sure to follow the Contributor Covenant!
 
-* Application GitHub URL submitted.
 
-* GitHub repository that contains application code.
 
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
