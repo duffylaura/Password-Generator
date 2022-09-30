@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-When you need a new, secure password, enter the following URL into any browser: 
+When you need a new, secure password, enter the following URL into any browser: https://duffylaura.github.io/Password-Generator/
 
 You will see a landing page that looks like the following: 
 
