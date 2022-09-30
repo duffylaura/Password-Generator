@@ -137,7 +137,7 @@ if (criteria2=='') {
 
   if ((max>1)&&(min<1)) {
 
-    if ((criteria2.length) <= (max)) {
+    if ((criteria2.length) <= Math.abs(max)) {
       return (criteria2)
     };
 
@@ -151,7 +151,7 @@ if (min > 0) {
 
   if ((criteria2.length) >= (Math.abs(min))) {
 
-    if (Math.abs(max) > (criteria2.length)) {return (criteria2)};
+    if (Math.abs(max) >= (criteria2.length)) {return (criteria2)};
 
     if (max=='') {return (criteria2)};
 
