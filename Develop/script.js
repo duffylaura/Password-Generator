@@ -135,10 +135,6 @@ if (criteria2=='') {
   if (max==1){
           return ((alert ("A secure password must be longer than 1 character")), "Enter more specific criteria, then try again.")};
 
-  if (min==1){
-    return (criteria2)
-  };
-
   if ((max>1)&&(min<1)) {
 
     if ((criteria2.length) <= (max)) {
@@ -151,60 +147,30 @@ if (criteria2=='') {
     };
   };
   
-  if (min>1) {
+if (min > 0) {
 
-        if (criteria2.length >= min) {
-          return (criteria2);
-        };
-        
-        if ((criteria2.length >= min)&&(max>1)) {
-          return (criteria2);
-        };
+  if ((criteria2.length) >= (Math.abs(min))) {
 
-        if ((criteria2.length-2)<min) {
+    if (Math.abs(max) > (criteria2.length)) {return (criteria2)};
+
+    if (max=='') {return (criteria2)};
+
+    if ((criteria2.length)> Math.abs(max)) {
+      alert ("The total number of characters you required as criteria is greater than the maximum number of characters that you have allowed.");
+      return ("Check criteria you have entered, then try again.")
+    };
+    
+  };
+
+  if ((criteria2.length)< (Math.abs(min))) {
           
           var additionalChars = [''];
 
-          var addRandomStart = Math.round (Math.random()*40);
+          var difference = (Math.abs(min))-(criteria2.length);
 
-          var addAmount = min - (criteria2.length-2); 
-
-          for (var i = addAmount; i>0; i--) {
-
-              var addTo4 = all[(addRandomStart)+(i)];
-              additionalChars.push(addTo4);}
-          
-          // Create more variety
-
-          additionalChars.shift();
-
-          var A = Math.round(Math.random()*55);
-
-          additionalChars.push (all[A]);
-
-          additionalChars.pop();
-
-          // Create more variety 
-
-          additionalChars.shift();
-
-          var B = Math.round(Math.random()*20);
-
-          additionalChars.push (all[B]);
-
-          additionalChars.pop();
-
-          //Create more variety 
-
-          additionalChars.shift();
-
-          var C = Math.round(Math.random()*7);
-
-          additionalChars.push (all[C]);
-
-          additionalChars.pop();
-
-          //
+          for (var i = difference; i>0; --i) {    
+                var addTo7 = numALL[(i-1)];     
+                additionalChars.push(addTo7);}
 
           var criteria3 = additionalChars.join('');
 
@@ -212,6 +178,5 @@ if (criteria2=='') {
 
           return (criteria4);
           };
-    };
-  
+        };
 }
