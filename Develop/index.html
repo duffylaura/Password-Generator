@@ -19,16 +19,20 @@
         
         <div class="card-header">
           <h2>Enter your password criteria below then click "Generate Password."</h2>
-          <p> If one of these criteria are not necessary, please leave the field blank. For example, if I did not need any special characters, I would leave the last field blank.</p>
+          <p> If one of these criteria are not necessary, please leave the field blank. 
+            <br><br> If you would like a password that is an exact amount of characters, type that amount in the "Minimum Number of Characters" field and leave the "Maximum Number of Characters" field blank.
+            <br><br> The lowest value you can input is 1. <br>
+          </p>
         </div>
 
         <div class="card-body">
           
           <form>
+            <br>
             <label for="minChar">Minimum Number of Characters</label>
             <input type="number" min="1" max="150" id="minChar" ><br><br>
 
-            <label for="maxChar">Maximum Number of Charactes</label>
+            <label for="maxChar">Maximum Number of Characters</label>
             <input type="number" min="1" max="150" id="maxChar"><br><br>
 
             <label for="lowChar">At least [] lowercase letters... </label>
