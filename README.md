@@ -31,14 +31,15 @@ After entering your desired amount of criteria, an output message will appear wr
 
 ## Additional Usage Notes
 
-1. If you enter a minimum character count value that is larger than the maximum character count value, you will receive a logic error message and be asked to fix your criteria. 
-2. If you enter "1" in the maximum character count, you will receive a message that having a 1 character password is not secure. You will be asked to fix your criteria and try again. 
-3. If you ONLY enter a "1" in the minimum character count you will receive the same message about a 1 character password. 
-4. If you ONLY enter values in the minimum or maximum character count prompts then the Password Generator will generate a password to meet that character count using an array of mixed lowercase letters, uppercase letters, special characters, and numbers (called "all" in the code).
-5. If you ONLY enter values in the parameter prompts other than those regarding character count, the Password Generator will generate a password that meets those criteria exactly. 
-6. If you enter a minimum value and parameter prompts, the Password Generator will first create a string that meets your parameters. Then, it will create a random string using the "all" array to meet the remaining character count. It will output the concatenation of the first string and the second. 
-7. If the minimum character count value is equal to the maximum character count value, the Password Generator will function as it does in Note 6. Unless they are both equal to 1. Then the Password Generator will function as it does in Note 2.
-8. If you enter a maximum value and parameter prompts, the Password Generator will function as it does in Note 5. Unless, the length of the password generated from the prompts is larger than the entered maximum character count. For example, if you entered that you need 2 uppercase letters and 2 special characters, and a maximum character count of 3. This will result in an error message. You will be asked to fix your criteria and try again. 
+1. If you would like a password that is an exact amount of characters, type that amount in the "Minimum Number of Characters" field and leave the "Maximum Number of Characters" field blank. 
+2. If you enter a minimum character count value that is larger than the maximum character count value, you will receive a logic error message and be asked to fix your criteria. 
+3. If you enter "1" in the maximum character count, you will receive a message that having a 1 character password is not secure. You will be asked to fix your criteria and try again. 
+4. If you ONLY enter a "1" in the minimum character count you will receive the same message about a 1 character password. 
+5. If you ONLY enter values in the minimum or maximum character count prompts then the Password Generator will generate a password to meet that character count using an array of mixed lowercase letters, uppercase letters, special characters, and numbers (called "all" in the code).
+6. If you ONLY enter values in the parameter prompts other than those regarding character count, the Password Generator will generate a password that meets those criteria exactly. 
+7. If you enter a minimum value and parameter prompts, the Password Generator will first create a string that meets your parameters. Then, it will create a random string using the "all" array to meet the remaining character count. It will output the concatenation of the first string and the second. 
+8. If the minimum character count value is equal to the maximum character count value, the Password Generator will function as it does in Note 6. Unless they are both equal to 1. Then the Password Generator will function as it does in Note 2.
+9. If you enter a maximum value and parameter prompts, the Password Generator will function as it does in Note 5. Unless, the length of the password generated from the prompts is larger than the entered maximum character count. For example, if you entered that you need 2 uppercase letters and 2 special characters, and a maximum character count of 3. This will result in an error message. You will be asked to fix your criteria and try again. 
 
 
 ## Technology Used
