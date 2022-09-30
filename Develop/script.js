@@ -41,24 +41,10 @@ function generatePassword () {
 
 var randomLowChars = [''];
 
-if (low>0){
-  
-  var alphaRandomStart = Math.round(Math.random()*10);
-  
-  for (var i = low; i>0; i--) {
-  var addTo = lowALL [alphaRandomStart+(i-1)];
+if (low>0){ 
+  for (var i = low; i>0; --i) {
+  var addTo = lowALL [(i-1)];
   randomLowChars.push(addTo);}
-
-    // The second part of this "if" statement is to splice out the '' space the array begins with. 
-    // (Not a truly empty array)
-    // Then replace that '' with a random letter
-    // This also adds more variety
-
-  randomLowChars.shift();
-
-  var alphaRandomStart2 = Math.round(Math.random()*10);
-  randomLowChars.push(lowALL[alphaRandomStart2]);
-  randomLowChars.pop();
 };
 
 // Generate Uppercase Characters, store in randomUpChars
@@ -66,61 +52,36 @@ if (low>0){
 var randomUpChars = [''];
 
 if (up>0){
-
-  var alphaRandomStart3 = Math.round(Math.random()*10);
-
-  for (var i = up; i>0; i--) {
-  var addTo1 = upALL [(alphaRandomStart3)+(i-1)];
+  for (var i = up; i>0; --i) {
+  var addTo1 = upALL [(i-1)];
   randomUpChars.push(addTo1);}
-
-  randomUpChars.shift();
-
-  var alphaRandomStart4 = Math.round(Math.random()*10);
-  randomUpChars.push(upALL[alphaRandomStart4]);
-  randomUpChars.pop();
 };
 
 var randomNumChars = [''];
 
 if (num>0){
-
-  var numRandomStart = Math.round(Math.random()*5);
-
-  for (var i = num; i>0; --i) {         //this for loop keeps glitching, but not consistently. Manuel posted about double minus as prefix. That seemed to fix it. Edited spc char loop too.
-  var addTo2 = numALL[(numRandomStart)+(i-1)];
+  for (var i = num; i>0; --i) {    
+  var addTo2 = numALL[(i-1)];     
   randomNumChars.push(addTo2);}
-
-  randomNumChars.shift();
-
-  var numRandomStart2 = Math.round(Math.random()*10);
-  randomNumChars.push(numALL[numRandomStart2]);
-  randomNumChars.pop();
-};
+};       
 
 // Generate Special Characters, store in randomSpcChars
 
 var randomSpcChars = [''];
 
 if (spc>0){
-
-  var spcRandomStart = Math.round(Math.random()*12);
-
   for (var i = spc; i>0; --i) {
-  var addTo3 = spcALL [(spcRandomStart)+(i-1)];
+  var addTo3 = spcALL [i-1];
   randomSpcChars.push(addTo3);}
-
-  randomSpcChars.shift();
-
-  var spcRandomStart2 = Math.round(Math.random()*10);
-  randomSpcChars.push(spcALL[spcRandomStart2]);
-  randomSpcChars.pop();
 };
-  
-  var criteria1 = randomLowChars.concat(randomUpChars, randomNumChars, randomSpcChars);
 
-  var criteria2 = criteria1.join('');
-  
-////////// If statements that generate the password return.\\\\\\\\\\\\\\\\\
+// create string that meets parameters explicitly:
+
+var criteria1 = randomLowChars.concat(randomUpChars, randomNumChars, randomSpcChars);
+
+var criteria2 = criteria1.join('');
+
+////////// If statements that generate the password return: \\\\\\\\\\\\\\\\\
 
 if (criteria2=='') {
     
