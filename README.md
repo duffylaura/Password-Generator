@@ -47,10 +47,10 @@ GitHub, Git, HTML5, CSS3, JavaScript
 
 ## Learning Points 
 
--Connecting user input to variables in JavaScript
--Using a "for" loop and adding the value at the end of each iteration of the loop to an exisitng array
--Creating randomness in JavaScript, and learning about the lack of true randomness
--Learning about different methods for shuffling arrays, including the Fisher-Yates shuffle
+- Connecting user input to variables in JavaScript
+- Using a "for" loop and adding the value at the end of each iteration of the loop to an exisitng array
+- Creating randomness in JavaScript, and learning about the lack of true randomness
+- Learning about different methods for shuffling arrays, including the Fisher-Yates shuffle
 
 ## User Info
 
